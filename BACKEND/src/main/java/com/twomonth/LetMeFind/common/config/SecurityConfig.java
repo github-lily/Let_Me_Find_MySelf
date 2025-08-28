@@ -19,9 +19,7 @@ public class SecurityConfig {
                 // 세션 관리 정책을 STATELESS로 설정 (세션을 사용하지 않음)
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 // 모든 요청에 대해 인증을 요구
-                .authorizeHttpRequests(auth -> auth.anyRequest().authenticated())
-                // OAuth2 리소스 서버 설정 (JWT 검증)
-                .oauth2ResourceServer(oauth2 -> oauth2.jwt());
+                .authorizeHttpRequests(auth -> auth.anyRequest().authenticated());
 
         return http.build();
     }
