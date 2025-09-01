@@ -3,6 +3,8 @@ package com.twomonth.LetMeFind.mission.model.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "main_missions")
 @Getter @Setter @NoArgsConstructor @AllArgsConstructor

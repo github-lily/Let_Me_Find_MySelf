@@ -3,6 +3,8 @@ package com.twomonth.LetMeFind.user.model.entity;
 import com.twomonth.LetMeFind.common.domin.ActiveStatus;
 import com.twomonth.LetMeFind.common.domin.Gender;
 import com.twomonth.LetMeFind.common.domin.Provider;
+import com.twomonth.LetMeFind.mission.model.entity.MainAssignment;
+import com.twomonth.LetMeFind.mission.model.entity.SubAssignment;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
@@ -10,6 +12,7 @@ import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Table(name = "users")
 @Entity
@@ -44,9 +47,11 @@ public class User {
 
     @Enumerated(EnumType.STRING)
     @Column(name = "is_active", nullable = false)
+    @Builder.Default
     private ActiveStatus isActive = ActiveStatus.ACTIVATED;
 
     @Column(nullable = false)
+    @Builder.Default
     private Integer stamp = 0;
 
     @CreationTimestamp
@@ -64,7 +69,7 @@ public class User {
     @OneToMany(mappedBy = "user")
     private List<SubAssignment> subAssignments;
 
-    @OneToMany(mappedBy = "user")
-    private List<Report> reports;
+//    @OneToMany(mappedBy = "user")
+//    private List<Report> reports;
 }
 

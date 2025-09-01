@@ -21,7 +21,7 @@ public class AuthController {
     @PostMapping("/auth/kakao")
     public ResponseEntity<?> kakaoAuth(@RequestBody Map<String, String> kakaoUser) {
         String id = kakaoUser.get("id");
-        String email = kakaoUser.get("email");
+        String providerId = kakaoUser.get("providerId");
         String nickname = kakaoUser.get("nickname");
 
         // DB 조회
@@ -29,7 +29,7 @@ public class AuthController {
             // 신규 유저 생성
             User newUser = User.builder()
                     .id(id)
-                    .email(email)
+                    .providerId(providerId)
                     .nickname(nickname)
                     .build();
             return userRepository.save(newUser);

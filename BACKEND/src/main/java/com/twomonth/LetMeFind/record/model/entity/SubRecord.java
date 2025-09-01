@@ -27,6 +27,7 @@ public class SubRecord {
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
+    @Builder.Default
     private RecordStatus status = RecordStatus.NOT_STARTED;
 
     @CreationTimestamp

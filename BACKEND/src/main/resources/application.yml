@@ -8,5 +8,5 @@ spring:
     password: ${MYSQL_PASSWORD:root}
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: create
     show-sql: true

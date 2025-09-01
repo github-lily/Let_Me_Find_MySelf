@@ -28,6 +28,7 @@ public class MainRecord {
 
     @Enumerated(EnumType.STRING)
     @Column
+    @Builder.Default
     private RecordStatus status = RecordStatus.NOT_STARTED;
 
     // 예약어 컬럼명 그대로 사용: @Column(name="like")
@@ -58,10 +59,12 @@ public class MainRecord {
 
     @Enumerated(EnumType.STRING)
     @Column(name = "feedback_status", nullable = false)
+    @Builder.Default
     private FeedbackStatus feedbackStatus = FeedbackStatus.NOT_STARTED;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
+    @Builder.Default
     private Reaction reaction = Reaction.NONE;
 
     @CreationTimestamp
