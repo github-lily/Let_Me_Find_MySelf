@@ -10,7 +10,7 @@ import org.hibernate.annotations.UpdateTimestamp;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "sub_assignments_v2")
+@Table(name = "sub_assignments")
 @Getter @Setter @NoArgsConstructor @AllArgsConstructor
 @Builder
 public class SubAssignment {
