@@ -26,7 +26,7 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "user_id")
-    private String id; // 카카오 userId (Long → String 변환)
+    private Integer id; // 카카오 userId (Long → String 변환)
 
     @Column(length = 20, nullable = false)
     private String nickname;

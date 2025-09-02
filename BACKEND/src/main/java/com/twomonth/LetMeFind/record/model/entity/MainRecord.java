@@ -20,7 +20,7 @@ public class MainRecord {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "main_record_id")
-    private Long id;
+    private Integer id;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "assignment_id", nullable = false)
@@ -32,10 +32,10 @@ public class MainRecord {
     private RecordStatus status = RecordStatus.NOT_STARTED;
 
     // 예약어 컬럼명 그대로 사용: @Column(name="like")
-    @Column(name = "like", length = 5000, nullable = false)
+    @Column(name = "like", length = 500, nullable = false)
     private String likeText;
 
-    @Column(name = "dislike", length = 5000, nullable = false)
+    @Column(name = "dislike", length = 500, nullable = false)
     private String dislike;
 
     @Column(nullable = false)
@@ -44,7 +44,7 @@ public class MainRecord {
     @Column(length = 50, nullable = false)
     private String feeling;
 
-    @Column(length = 5000)
+    @Column(length = 500)
     private String other;
 
     @Column(name = "clear_time")
@@ -54,7 +54,7 @@ public class MainRecord {
     @Column
     private Weather weather;
 
-    @Column(length = 5000)
+    @Column(length = 500)
     private String feedback;
 
     @Enumerated(EnumType.STRING)

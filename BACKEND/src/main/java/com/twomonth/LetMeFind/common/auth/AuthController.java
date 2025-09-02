@@ -28,7 +28,7 @@ public class AuthController {
         User user = userRepository.findById(id).orElseGet(() -> {
             // 신규 유저 생성
             User newUser = User.builder()
-                    .id(id)
+                    .id(Integer.valueOf(id))
                     .providerId(providerId)
                     .nickname(nickname)
                     .build();
@@ -36,7 +36,7 @@ public class AuthController {
         });
 
         // JWT 발급
-        String accessToken = jwtService.generateAccessToken(user.getId());
+        String accessToken = jwtService.generateAccessToken(String.valueOf(user.getId()));
 
         // JWT를 Response Header에 담아서 전송
         return ResponseEntity.ok()

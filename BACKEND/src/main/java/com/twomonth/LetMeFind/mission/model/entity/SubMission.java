@@ -13,7 +13,7 @@ public class SubMission {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "sub_mission_id")
-    private Long id;
+    private Integer id;
 
     @Column(length = 250, nullable = false)
     private String title;

@@ -13,7 +13,7 @@ public class MainMission {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "mission_id")
-    private Long id;
+    private Integer id;
 
     @Column(length = 250, nullable = false)
     private String title;
