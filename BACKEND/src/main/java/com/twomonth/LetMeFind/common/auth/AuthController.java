@@ -21,22 +21,22 @@ public class AuthController {
     @PostMapping("/auth/kakao")
     public ResponseEntity<?> kakaoAuth(@RequestBody Map<String, String> kakaoUser) {
         String id = kakaoUser.get("id");
-        String email = kakaoUser.get("email");
+        String providerId = kakaoUser.get("providerId");
         String nickname = kakaoUser.get("nickname");
 
         // DB 조회
         User user = userRepository.findById(id).orElseGet(() -> {
             // 신규 유저 생성
             User newUser = User.builder()
-                    .id(id)
-                    .email(email)
+                    .id(Integer.valueOf(id))
+                    .providerId(providerId)
                     .nickname(nickname)
                     .build();
             return userRepository.save(newUser);
         });
 
         // JWT 발급
-        String accessToken = jwtService.generateAccessToken(user.getId());
+        String accessToken = jwtService.generateAccessToken(String.valueOf(user.getId()));
 
         // JWT를 Response Header에 담아서 전송
         return ResponseEntity.ok()
