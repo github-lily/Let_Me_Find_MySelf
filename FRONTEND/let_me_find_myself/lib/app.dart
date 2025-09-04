@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:let_me_find_myself/pages/auth/login.dart';
+import 'package:let_me_find_myself/utils/color.dart';
 import 'package:let_me_find_myself/widgets/main_scaffold.dart';
 
 class LetMeFindMyself extends StatelessWidget {
@@ -8,6 +9,12 @@ class LetMeFindMyself extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        scaffoldBackgroundColor: AppColors.bgColor,
+        bottomNavigationBarTheme: BottomNavigationBarThemeData(
+          backgroundColor: Colors.white,
+        ),
+      ),
       home: const AuthGate(),
       debugShowCheckedModeBanner: false,
     );

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 class AppIcons {
   // 하단 바 사이즈 고정
-  static const double _navbarSize = 24.0;
+  static const double _navbarSize = 30.0;
 
   // 네브바 요소들
   static SvgPicture home({Color? color, double size = _navbarSize}) =>
