@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:let_me_find_myself/assets/icons/icons.dart';
+import 'package:let_me_find_myself/utils/color.dart';
 
 class BottomNavbar extends StatelessWidget {
   final int currentIndex;
@@ -21,31 +22,31 @@ class BottomNavbar extends StatelessWidget {
       items: [
         BottomNavigationBarItem(
           icon: AppIcons.home(
-            color:  currentIndex == 0 ? Colors.blue : Colors.green,
+            color:  currentIndex == 0 ? AppColors.grey60 : AppColors.grey30,
           ),
           label: '',
         ),
         BottomNavigationBarItem(
           icon: AppIcons.missionList(
-            color:  currentIndex == 1 ? Colors.blue : Colors.green,
+            color:  currentIndex == 1 ? AppColors.grey60 : AppColors.grey30,
           ),
           label: '',
         ),
         BottomNavigationBarItem(
           icon: AppIcons.report(
-            color:  currentIndex == 2 ? Colors.blue : Colors.green,
+            color:  currentIndex == 2 ? AppColors.grey60 : AppColors.grey30,
           ),
           label: '',
         ),
         BottomNavigationBarItem(
           icon: AppIcons.calendar(
-            color:  currentIndex == 3 ? Colors.blue : Colors.green,
+            color:  currentIndex == 3 ? AppColors.grey60 : AppColors.grey30,
           ),
           label: '',
         ),
         BottomNavigationBarItem(
           icon: AppIcons.myPage(
-            color:  currentIndex == 4 ? Colors.blue : Colors.green,
+            color:  currentIndex == 4 ? AppColors.grey60 : AppColors.grey30,
           ),
           label: '',
         ),
