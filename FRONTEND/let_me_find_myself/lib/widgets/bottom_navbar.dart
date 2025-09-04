@@ -21,32 +21,47 @@ class BottomNavbar extends StatelessWidget {
       backgroundColor: Colors.white,
       items: [
         BottomNavigationBarItem(
-          icon: AppIcons.home(
-            color:  currentIndex == 0 ? AppColors.grey60 : AppColors.grey30,
+          icon: Padding(
+            padding: const EdgeInsets.only(top: 12.0), // 위쪽만 6px 여백
+            child: AppIcons.home(
+              color: currentIndex == 0 ? AppColors.grey60 : AppColors.grey30,
+            ),
           ),
           label: '',
         ),
         BottomNavigationBarItem(
-          icon: AppIcons.missionList(
-            color:  currentIndex == 1 ? AppColors.grey60 : AppColors.grey30,
+          icon: Padding(
+            padding: const EdgeInsets.only(top: 12.0),
+            child: AppIcons.missionList(
+              color:  currentIndex == 1 ? AppColors.grey60 : AppColors.grey30,
+            ),
           ),
           label: '',
         ),
         BottomNavigationBarItem(
-          icon: AppIcons.report(
-            color:  currentIndex == 2 ? AppColors.grey60 : AppColors.grey30,
+          icon: Padding(
+            padding: const EdgeInsets.only(top: 12.0),
+            child: AppIcons.report(
+              color:  currentIndex == 2 ? AppColors.grey60 : AppColors.grey30,
+            ),
           ),
           label: '',
         ),
         BottomNavigationBarItem(
-          icon: AppIcons.calendar(
-            color:  currentIndex == 3 ? AppColors.grey60 : AppColors.grey30,
+          icon: Padding(
+            padding: const EdgeInsets.only(top: 12.0),
+            child: AppIcons.calendar(
+              color:  currentIndex == 3 ? AppColors.grey60 : AppColors.grey30,
+            ),
           ),
           label: '',
         ),
         BottomNavigationBarItem(
-          icon: AppIcons.myPage(
-            color:  currentIndex == 4 ? AppColors.grey60 : AppColors.grey30,
+          icon: Padding(
+            padding: const EdgeInsets.only(top: 12.0),
+            child: AppIcons.user(
+              color:  currentIndex == 4 ? AppColors.grey60 : AppColors.grey30,
+            ),
           ),
           label: '',
         ),

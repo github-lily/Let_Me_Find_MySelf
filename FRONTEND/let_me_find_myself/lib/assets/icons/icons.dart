@@ -34,7 +34,7 @@ class AppIcons {
         height: size,
         color: color,
       );
-  static SvgPicture myPage({Color? color, double size = _navbarSize}) =>
+  static SvgPicture user({Color? color, double size = _navbarSize}) =>
       SvgPicture.asset(
         'lib/assets/icons/user.svg',
         width: size,
