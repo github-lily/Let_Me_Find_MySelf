@@ -10,6 +10,7 @@ class LetMeFindMyself extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
+        fontFamily: 'SOYO_Maple',
         scaffoldBackgroundColor: AppColors.bgColor,
         bottomNavigationBarTheme: BottomNavigationBarThemeData(
           backgroundColor: Colors.white,

@@ -55,6 +55,15 @@ dev_dependencies:
 flutter:
   assets:
     - lib/assets/icons/
+  fonts:
+    - family: KNPSKkomi
+      fonts:
+        - asset: lib/assets/fonts/KNPSKkomi.otf
+
+    - family: SOYO_Maple
+      fonts:
+        - asset: lib/assets/fonts/SOYO_Maple_Bold.ttf
+        - asset: lib/assets/fonts/SOYO_Maple_Regular.ttf
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
